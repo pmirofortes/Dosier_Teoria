@@ -1,12 +1,21 @@
 # Titulo del dosier
-indice con enlaces
+1. [GITHUB](URL "Titulo opcional")
+2. [MARKDOWN](URL "Titulo opcional")
+3. [HTML](URL "Titulo opcional")
+4. [CSS](URL "Titulo opcional")
+5. [DISEÑO RESPONSIVE](URL "Titulo opcional")
 
 # 1. GITHUB
 # 2. MARKDOWN
 ## 2.1. Titulos
 Podemos escribir todo nuestro texto en el documento y ya está pero si lo queremos tener organizado y que facilite la lectura utilizaremos encabezados.
 
-Para crear encabezados utilizaremos "#" 
+Para crear encabezados utilizaremos "#" y pondremos tantos "#" como niveles de titulo querramos poner.
+```
+# Titulo de nivel 1
+## Titulo de nivel 2
+```
+
 ## 2.2. **Negrita** y _cursiva_
 Para escribir un texto en _cursiva_ utilizaremos uno de estos operadores al inicio y al final del texto ( _ o *) y para la **negrita** utilizaremos 2:
 ```
@@ -101,5 +110,53 @@ Esta tabla por defecto viene con el estilo de zebra stripes que nos ayuda a la l
 
 
 # 3. HTML
+## 3.1. Introducción
+Tim Berners-Lee creó HTML (HyperText Markup Language), es el lenguaje de marcas mas importante de internet, sin HTML no se veria nada en el navegador.
+
+HTML define la estrcutra y contenido (imagenes, listas, enlaces...) mediante _etiquetas_, es muy facil de entender e interpretar
+
+Hypertext (hipertexto), no es mas que un texto que enlaza con otros contenidos mediante enlaces.
+### 3.1.1. Etiquetas
+Markup (etiquetas), HTML está estructurado a base de etiquetas:
+la etiqueta de apertura indica el inicio de un bloque ```<p>``` y las de cierre indican el final de un bloque pero no siempre se cierran ```</p>```
+### 3.1.2. Atributos
+Los elementos pueden tener atributos que 
+## 3.2. Estructura básica de HTML
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+```
+- ```<!DOCTYPE html>```:
+- ```<html></html>```:
+- ```<head></head>```:
+- ```<body></body>```: Muestra el contenido visible
+- ```<meta></meta>```:
+  - ```<meta></meta>```:
+- ```<title></title>```: Establece el titulo de tu pagina que es el que aparece en las pestañas del navegador.
+
+## 3.3. Elementos de bloque y línea
+### Elementos de bloque
+definicion:
+
+br, titulos y parrafos, (div)
+
+### Elementos de línea
+Definicion:
+emfasis, strong, span, 
+
+
+- comentarios
+- listas ordenadas y desordenas
+## 3.4.
+
 # 4. CSS
 # 5. Diseño Responsive
