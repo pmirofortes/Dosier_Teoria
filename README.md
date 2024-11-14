@@ -1,11 +1,40 @@
 # Titulo del dosier
-1. [GITHUB](URL "Titulo opcional")
-2. [MARKDOWN](URL "Titulo opcional")
-3. [HTML](URL "Titulo opcional")
-4. [CSS](URL "Titulo opcional")
-5. [DISEÑO RESPONSIVE](URL "Titulo opcional")
+1. [GITHUB](#1-github "Enlace al apartado de GitHub")
+2. [MARKDOWN](#2-markdown "Enlace al apartado de MarkDown")
+3. [HTML](#3-html "Enlace al apartado de HTML")
+4. [CSS](#4-css "Enlace al apartado de CSS")
+5. [DISEÑO RESPONSIVE](#5-diseño-responsive "Enlace al apartado de  Diseño Responsive")
 
 # 1. GITHUB
+## 1.1. Instalar Git
+Para utilizar Git, primero lo instalaremos. Entrando en este enlace lo descargaremos y en el cmd podremos escribir codigo.
+
+[Git para Windows](https://git-scm.com/download/win)
+## 1.2. Crear cuenta en GitHub
+1. Visitar [GitHub]([URL](https://github.com/) "enlace a GitHub")
+2. Haz clic en "Sign up" (registrarse).
+3. Introduce tu nombre de usuario, correo electrónico y una contraseña segura.
+4. Completa el proceso de verificación y la configuración de tu cuenta.
+5. Una vez registrada, podrás crear repositorios y colaborar en proyectos.
+## 1.3. Repositorios
+### 1.3.1. Crear repositorio
+1. Hacemos click en "Nuevo" en la pagina principal.
+2. Hacemos click en "crear repositorio"
+### 1.3.2. Clonar repositorio
+1. Copiamos la URL del repositorio en GitHub.
+2. En la terminal, usarmos el siguiente comando:
+```git clone https://github.com/usuario/repo.git```
+## 1.4. Codigos Git
+ - ```git init```. Se usa para inicializar un repositorio Git en local.
+ - ```git branch -M "rama"```. Se usa para cambiar a otras ramas.
+ - ```git branch```. Se usa para listar las ramas del repositorio.
+ - ```git add "archivo.txt"```. Se usa para añadir agregar los archivos al area intermedia antes de hacer el commit. Podemos escribir el nombre de los archivos o usar "." para añadir todos los archivos.
+ - ```git commit -m "Mensaje del commit"```. Se usa para guardar los cambios del area intermedia en el commit para posteriormente subirlo. 
+ - ```git push origin main```. Se usa para enviar el commit a la rama "origin" desde "main" y subirlo a github.
+ - ```git remote add origin https://github.com/usuario/repo.git```. Se usa para clonar un repositorio remoto a nuestro local.
+
+
+
 # 2. MARKDOWN
 ## 2.1. Titulos
 Podemos escribir todo nuestro texto en el documento y ya está pero si lo queremos tener organizado y que facilite la lectura utilizaremos encabezados.
@@ -14,6 +43,7 @@ Para crear encabezados utilizaremos "#" y pondremos tantos "#" como niveles de t
 ```
 # Titulo de nivel 1
 ## Titulo de nivel 2
+### Titulo de nivel 3
 ```
 
 ## 2.2. **Negrita** y _cursiva_
@@ -113,15 +143,15 @@ Esta tabla por defecto viene con el estilo de zebra stripes que nos ayuda a la l
 ## 3.1. Introducción
 Tim Berners-Lee creó HTML (HyperText Markup Language), es el lenguaje de marcas mas importante de internet, sin HTML no se veria nada en el navegador.
 
-HTML define la estrcutra y contenido (imagenes, listas, enlaces...) mediante _etiquetas_, es muy facil de entender e interpretar
+HTML define la estructura y contenido (imagenes, listas, enlaces...) mediante _etiquetas_, ademas, este lenguaje es muy facil de entender e interpretar, por eso es tan usado en las webs, lo que hace es formatear un texto plano para darle estructura. Tambien le da apariencia a un texto usando [css](#4-css "Enlace al apartado de CSS").
 
-Hypertext (hipertexto), no es mas que un texto que enlaza con otros contenidos mediante enlaces.
 ### 3.1.1. Etiquetas
-Markup (etiquetas), HTML está estructurado a base de etiquetas:
-la etiqueta de apertura indica el inicio de un bloque ```<p>``` y las de cierre indican el final de un bloque pero no siempre se cierran ```</p>```
+HTML está estructurado a base de etiquetas:
+la etiqueta de apertura indica el inicio de un bloque ```<p>``` y las de cierre indican el final de un bloque pero no siempre se cierran ```</p>```.
 ### 3.1.2. Atributos
-Los elementos pueden tener atributos que 
+Los elementos pueden tener atributos que dan informacion extra a una etiqueta, por ejemplo ``` <img src="direccion de la imagen">"Texto de la imagen" </img> ``` esta etiqueta indica donde se encuentra la imagen y proporciona un texto a la imagen.
 ## 3.2. Estructura básica de HTML
+Un documento HTML está estructurado de esta manera:
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -135,28 +165,49 @@ Los elementos pueden tener atributos que
 </body>
 </html>
 ```
-- ```<!DOCTYPE html>```:
-- ```<html></html>```:
-- ```<head></head>```:
-- ```<body></body>```: Muestra el contenido visible
-- ```<meta></meta>```:
-  - ```<meta></meta>```:
-- ```<title></title>```: Establece el titulo de tu pagina que es el que aparece en las pestañas del navegador.
+- ```<!DOCTYPE html>```: Define que el documento es HTML5.
+- ```<html></html>```: Contenedor principal del documento.
+- ```<head></head>```: Contiene informacion que no se muestra en la web.
+  - ```<meta></meta>```: Define metadatos como la codificación de caracteres y la configuración de la visualización.
+  - ```<title></title>```: Establece el titulo de tu pagina que aparece en las pestañas del navegador.
+- ```<body></body>```: Muestra el contenido visible.
 
-## 3.3. Elementos de bloque y línea
+## 3.3. Etiquetas básicas de html
+Las etiquetas se clasifican en 2 tipos:
 ### Elementos de bloque
-definicion:
+Es un elemento que necesita una linea nueva para ejecutarse.
 
-br, titulos y parrafos, (div)
+`<h1>`-`<h6>`, `<p></p>`, `<ul>`, `<ol>`, `<li>`
 
 ### Elementos de línea
-Definicion:
-emfasis, strong, span, 
+Es un elemneto que se encuentra en la misma linea, es decir que se ejecuta detras de otro bloque.
+
+`<a>`, `<strong>`, `<em>`
+
+### Rutas
+En HTML se utilizan rutas para referenciar imagenes o enlaces. Se puede hacer de forma relativa o absoluta:
+- Ruta absoluta. Especifica la ubicacion completa del archivo en la web, es util cuando el archivo se encuentra en un servidor diferente o en una ubicacion especifica de la web. Por ejemplo: ```<img src="https.//www.example.com/images/logo.png" alt="Logo de Ejemplo">```
+- Ruta relativa. Especifica la ubicación en relación con el archivo actual. Es útil cuando los archivos están dentro del mismo dominio o estructura de carpetas.
+
+### Imagenes
+Para insertar imagenes usamos la etiqueta ```<img>``` con el atributo **```src```** que especifica laruta de la imagen. Tambien podemos añadir **```alt```**  para proporcionar un texto alternativo y **```width```**, **```height```** para darle tamaño a la imagen. Ejemplo:
+```
+<img src="logo.png" alt="Logo de la página" width="100" height="100">
+```
 
 
-- comentarios
-- listas ordenadas y desordenas
-## 3.4.
+### Enlaces
+Para insertar links usamos la etiqueta ```<a><\a>``` que tiene el atrbuto **```href```** que indica la direccion del enlace. Ejemplo:
+```
+<a href="https://www.ejemplo.com">Visitar Ejemplo</a>
+```
 
+
+
+
+## 3.4. Validación de HTML
+Es el proceso de verificar que el codigo de HTML cumple con los estandares establecidos por el World Wide Web Consortium. La Validación ayuda a detectar fallos.
+
+[W3C](https://validator.w3.org "Titulo opcional")
 # 4. CSS
 # 5. Diseño Responsive
