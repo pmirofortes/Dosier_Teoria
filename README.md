@@ -130,6 +130,7 @@ Luego definiremos los caracteres para una columna (el número de guiones que hay
 
 ```
 Así quedaría nuestra tabla:
+
 |Título 1|Título 2|Título 3|
 |------------|:-------:|----------------:|
 |Perros|1200|Adoptados|
