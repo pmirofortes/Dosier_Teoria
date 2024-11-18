@@ -87,8 +87,6 @@ function calcularPromedio(numeros) {
 const notas = [8, 7.5, 9, 10, 6];
 console.log("El promedio es: " + calcularPromedio(notas));
 ```
-*Figura 1: Código de JavaScript para cálculos de notas*
-
 
 ## 2.5. Enlaces e imagenes
 ### Enlaces
@@ -106,7 +104,7 @@ Colocar imagenes en nuestra pagina es igual de sencillo que los enlaces pero ant
 ![TextoAlternativo](UbicacionDeLaImagen "Titulo Opcional")
 ```
 ![Gif Spidermna](spiderman-animated-gif.gif "Gif Spiderman")
-*Figura 2: Ejemplo de aplicar imágenes*
+
 
 
 ## 2.6. Tablas
@@ -211,44 +209,61 @@ Es el proceso de verificar que el codigo de HTML cumple con los estandares estab
 [W3C](https://validator.w3.org "Validador de HTML W3C")
 
 ## 3.5. Formularios
-En HTML podemos implementar fromularios para rellenar datos y enviarlos (si queremos a una base de datos)
-### 3.5.1. Etiquetas de formularios
+En HTML, los formularios son una herramienta fundamental para recopilar datos del usuario y enviarlos para su procesamiento (por ejemplo, a un servidor o base de datos).
+
+### 3.5.1. Etiquetas principales para formularios
 ```<form>```
+Se utiliza para definir un formulario. Acepta atributos como:
 
-```<input> ```
+- action: Especifica la URL donde se enviarán los datos.
+method: Define el método HTTP para enviar los datos (GET o POST).
 
-```<textarea> ``` 
+```<input>```
+Se emplea para recibir datos del usuario. Atributos comunes:
 
-```<label> ```
+- type: Define el tipo de entrada. Ejemplos:
+  - text: Campo de texto simple.
+  - password: Oculta el texto introducido (contraseñas).
+  - radio: Botón de selección única entre varias opciones.
+  - checkbox: Casilla de verificación.
+  - placeholder: Muestra un texto informativo dentro del campo cuando está vacío.
+  - submit: Para enviar el formulario.
 
-```<select> ```
+```<textarea>``` Define un área de texto multilínea. Atributos importantes:
+- rows: Número de filas visibles. 
+- cols: Número de columnas visibles.
+- placeholder: Texto informativo cuando está vacío.
 
-```<option> ```
+```<select>``` define el contenedor de un menú desplegable.
 
-```<fieldset> ```
+```<option>``` define cada opción del menú. Puede incluir el atributo ```disabled``` para deshabilitar opciones.
 
-```<legend> ```
+```<fieldset>``` agrupa elementos relacionados en un formulario, creando un bloque lógico.
 
-```<button> ```
+```<legend>``` proporciona un título para el grupo.
 
-Ejemplo de un formulario en HTML:
+```<button>``` Define un botón interactivo, generalmente para enviar el formulario.
+
 ```
-<form action = "recepcion.png" method = "GET">   
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action = "recepcion.png" method = "GET">   
         <label for = "nombre">Nombre :</label>
-        <input type = "text" id ="nombre" name ="nombre" placeholder ="Introduce tu nombre"><br><br>
-       
+        <input type = "text" id ="nombre" name ="nombre" placeholder = "Introduce tu nombre"><br><br>
         <label for = "password" >Contraseña :</label>
         <input type = "password" id ="password" name ="password" placeholder ="Introduce tu contraseña"><br><br>
-
-
         <fieldset>
             <legend>Idioma</legend>
             <input type = "radio" id="idioma" name = "idioma" value = "castellano">
             <label for = "castellano">Castellano</label>
-
             <input type = "radio" id="idioma" name = "idioma" value = "catalan">
             <label for = "catalan">Catalán</label>
-
             <input type = "radio" id="idioma" name = "idioma" value = "chino">
             <label for = "chino">Chino</label>
         </fieldset>
@@ -256,18 +271,14 @@ Ejemplo de un formulario en HTML:
             <legend>Nacionalidad</legend>
             <input type = "checkbox" name = "nacionalidad" value = "espanola">
             <label for = "espanola">Española</label>
-
             <input type = "checkbox" name = "nacionalidad" value = "alemana">
             <label for = "alemana">Alemana</label>
-
             <input type = "checkbox" name = "nacionalidad" value = "andorrana">
             <label for = "andorrana">Andorrana</label>
         </fieldset>
-
         <legend></legend>
         <label for="observaciones"> Observaciones</label>
         <textarea name ="observaciones " id="observaciones" cols="80" rows="4" placeholder="Introduce tu comentario"></textarea>
-
         <label for="ciudad">Ciudad</label>
         <select id="ciudad" name="ciudad">
             <option value=""disabled>Seleccione una ciudad</option>
@@ -280,8 +291,10 @@ Ejemplo de un formulario en HTML:
         <br><br>
         <button type="submit"> Enviar datos</button>
     </form>
+
+</body>
+</html>
 ```
-
-
+![Ejemplo form](../Dosier_Teoria/ejemplo_form.png "ejemplo form")
 # 4. CSS
 # 5. Diseño Responsive
