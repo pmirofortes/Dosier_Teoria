@@ -185,6 +185,8 @@ Es un elemneto que se encuentra en la misma linea, es decir que se ejecuta detra
 
 `<a>`, `<strong>`, `<em>`
 
+Tambien podemos añadir comentarios para despues leer el codigo y saber lo que escribimos en el pasado.  ``` <!--ejemplo de comentario--> ``` 
+
 ### Rutas
 En HTML se utilizan rutas para referenciar imagenes o enlaces. Se puede hacer de forma relativa o absoluta:
 - Ruta absoluta. Especifica la ubicacion completa del archivo en la web, es util cuando el archivo se encuentra en un servidor diferente o en una ubicacion especifica de la web. Por ejemplo: ```<img src="https.//www.example.com/images/logo.png" alt="Logo de Ejemplo">```
@@ -203,12 +205,83 @@ Para insertar links usamos la etiqueta ```<a><\a>``` que tiene el atrbuto **```h
 <a href="https://www.ejemplo.com">Visitar Ejemplo</a>
 ```
 
-
-
-
 ## 3.4. Validación de HTML
 Es el proceso de verificar que el codigo de HTML cumple con los estandares establecidos por el World Wide Web Consortium. La Validación ayuda a detectar fallos.
 
-[W3C](https://validator.w3.org "Titulo opcional")
+[W3C](https://validator.w3.org "Validador de HTML W3C")
+
+## 3.5. Formularios
+En HTML podemos implementar fromularios para rellenar datos y enviarlos (si queremos a una base de datos)
+### 3.5.1. Etiquetas de formularios
+```<form>```
+
+```<input> ```
+
+```<textarea> ``` 
+
+```<label> ```
+
+```<select> ```
+
+```<option> ```
+
+```<fieldset> ```
+
+```<legend> ```
+
+```<button> ```
+
+Ejemplo de un formulario en HTML:
+```
+<form action = "recepcion.png" method = "GET">   
+        <label for = "nombre">Nombre :</label>
+        <input type = "text" id ="nombre" name ="nombre" placeholder ="Introduce tu nombre"><br><br>
+       
+        <label for = "password" >Contraseña :</label>
+        <input type = "password" id ="password" name ="password" placeholder ="Introduce tu contraseña"><br><br>
+
+
+        <fieldset>
+            <legend>Idioma</legend>
+            <input type = "radio" id="idioma" name = "idioma" value = "castellano">
+            <label for = "castellano">Castellano</label>
+
+            <input type = "radio" id="idioma" name = "idioma" value = "catalan">
+            <label for = "catalan">Catalán</label>
+
+            <input type = "radio" id="idioma" name = "idioma" value = "chino">
+            <label for = "chino">Chino</label>
+        </fieldset>
+        <fieldset>
+            <legend>Nacionalidad</legend>
+            <input type = "checkbox" name = "nacionalidad" value = "espanola">
+            <label for = "espanola">Española</label>
+
+            <input type = "checkbox" name = "nacionalidad" value = "alemana">
+            <label for = "alemana">Alemana</label>
+
+            <input type = "checkbox" name = "nacionalidad" value = "andorrana">
+            <label for = "andorrana">Andorrana</label>
+        </fieldset>
+
+        <legend></legend>
+        <label for="observaciones"> Observaciones</label>
+        <textarea name ="observaciones " id="observaciones" cols="80" rows="4" placeholder="Introduce tu comentario"></textarea>
+
+        <label for="ciudad">Ciudad</label>
+        <select id="ciudad" name="ciudad">
+            <option value=""disabled>Seleccione una ciudad</option>
+            <option value="Barcelona">Barcelona</option>
+            <option value="Madrid">Madrid</option>
+            <option value="Valencia ">Valencia</option>
+            <option value="Sevilla">Sevilla</option>
+            <option value="Murcia">Murcia</option>
+        </select>
+        <br><br>
+        <button type="submit"> Enviar datos</button>
+    </form>
+```
+
+
 # 4. CSS
 # 5. Diseño Responsive
