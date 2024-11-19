@@ -212,6 +212,7 @@ Es el proceso de verificar que el codigo de HTML cumple con los estandares estab
 En HTML, los formularios son una herramienta fundamental para recopilar datos del usuario y enviarlos para su procesamiento (por ejemplo, a un servidor o base de datos).
 
 ### 3.5.1. Etiquetas principales para formularios
+
 ```<form>```
 Se utiliza para definir un formulario. Acepta atributos como:
 
@@ -243,6 +244,7 @@ Se emplea para recibir datos del usuario. Atributos comunes:
 ```<legend>``` proporciona un título para el grupo.
 
 ```<button>``` Define un botón interactivo, generalmente para enviar el formulario.
+
 
 ```
 <!DOCTYPE html>
@@ -295,6 +297,7 @@ Se emplea para recibir datos del usuario. Atributos comunes:
 </body>
 </html>
 ```
+
 ![Ejemplo form](../Dosier_Teoria/ejemplo_form.png "ejemplo form")
 # 4. CSS
 # 5. Diseño Responsive
