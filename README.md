@@ -286,6 +286,6 @@ En HTML, los formularios son una herramienta fundamental para recopilar datos de
 
 ```
 
-![Ejemplo form](../Dosier_Teoria/ejemplo_form.png "ejemplo form")
+![Ejemplo form](/ejemplo_form.png "ejemplo form")
 # 4. CSS
 # 5. Diseño Responsive
