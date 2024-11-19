@@ -213,48 +213,38 @@ En HTML, los formularios son una herramienta fundamental para recopilar datos de
 
 ### 3.5.1. Etiquetas principales para formularios
 
-```<form>```
-Se utiliza para definir un formulario. Acepta atributos como:
+```<form>```: Se utiliza para definir un formulario. Acepta atributos como:
 
-- action: Especifica la URL donde se enviarán los datos.
-method: Define el método HTTP para enviar los datos (GET o POST).
+  - action: Especifica la URL donde se enviarán los datos.
+  - method: Define el método HTTP para enviar los datos (GET o POST).
 
-```<input>```
-Se emplea para recibir datos del usuario. Atributos comunes:
+```<input>```: Se emplea para recibir datos del usuario. Atributos comunes:
 
-- type: Define el tipo de entrada. Ejemplos:
-  - text: Campo de texto simple.
-  - password: Oculta el texto introducido (contraseñas).
-  - radio: Botón de selección única entre varias opciones.
-  - checkbox: Casilla de verificación.
-  - placeholder: Muestra un texto informativo dentro del campo cuando está vacío.
-  - submit: Para enviar el formulario.
+  - type: Define el tipo de entrada. Ejemplos:
+    - text: Campo de texto simple.
+    - password: Oculta el texto introducido (contraseñas).
+    - radio: Botón de selección única entre varias opciones.
+    - checkbox: Casilla de verificación.
+    - placeholder: Muestra un texto informativo dentro del campo cuando está vacío.
+    - submit: Para enviar el formulario.
 
-```<textarea>``` Define un área de texto multilínea. Atributos importantes:
-- rows: Número de filas visibles. 
-- cols: Número de columnas visibles.
-- placeholder: Texto informativo cuando está vacío.
+```<textarea>```: Define un área de texto multilínea. Atributos importantes:
+  - rows: Número de filas visibles. 
+  - cols: Número de columnas visibles.
+  - placeholder: Texto informativo cuando está vacío.
 
-```<select>``` define el contenedor de un menú desplegable.
+```<select>```: define el contenedor de un menú desplegable.
 
-```<option>``` define cada opción del menú. Puede incluir el atributo ```disabled``` para deshabilitar opciones.
+```<option>```: define cada opción del menú. Puede incluir el atributo ```disabled``` para deshabilitar opciones.
 
-```<fieldset>``` agrupa elementos relacionados en un formulario, creando un bloque lógico.
+```<fieldset>```: agrupa elementos relacionados en un formulario, creando un bloque lógico.
 
-```<legend>``` proporciona un título para el grupo.
+```<legend>```: proporciona un título para el grupo.
 
-```<button>``` Define un botón interactivo, generalmente para enviar el formulario.
+```<button>```: Define un botón interactivo, generalmente para enviar el formulario.
 
 
 ```
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
     <form action = "recepcion.png" method = "GET">   
         <label for = "nombre">Nombre :</label>
         <input type = "text" id ="nombre" name ="nombre" placeholder = "Introduce tu nombre"><br><br>
@@ -294,8 +284,6 @@ Se emplea para recibir datos del usuario. Atributos comunes:
         <button type="submit"> Enviar datos</button>
     </form>
 
-</body>
-</html>
 ```
 
 ![Ejemplo form](../Dosier_Teoria/ejemplo_form.png "ejemplo form")
