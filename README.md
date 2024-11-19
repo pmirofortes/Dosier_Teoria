@@ -33,7 +33,7 @@ Para utilizar Git, primero lo instalaremos. Entrando en este enlace lo descargar
  - ```git push origin main```. Se usa para enviar el commit a la rama "origin" desde "main" y subirlo a github.
  - ```git remote add origin https://github.com/usuario/repo.git```. Se usa para clonar un repositorio remoto a nuestro local.
 
-
+[Enlace al encabezado](#titulo-del-dosier "Enlace al encabezado")
 
 # 2. MARKDOWN
 ## 2.1. Titulos
@@ -137,7 +137,7 @@ Así quedaría nuestra tabla:
 
 Esta tabla por defecto viene con el estilo de zebra stripes que nos ayuda a la lectura de tablas.
 
-
+[Enlace al encabezado](#titulo-del-dosier "Enlace al encabezado")
 # 3. HTML
 ## 3.1. Introducción
 Tim Berners-Lee creó HTML (HyperText Markup Language), es el lenguaje de marcas mas importante de internet, sin HTML no se veria nada en el navegador.
@@ -287,5 +287,9 @@ En HTML, los formularios son una herramienta fundamental para recopilar datos de
 ```
 
 ![Ejemplo form](/ejemplo_form.png "ejemplo form")
+
+[Enlace al encabezado](#titulo-del-dosier "Enlace al encabezado")
 # 4. CSS
+[Enlace al encabezado](#titulo-del-dosier "Enlace al encabezado")
 # 5. Diseño Responsive
+[Enlace al encabezado](#titulo-del-dosier "Enlace al encabezado")
