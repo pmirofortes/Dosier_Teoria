@@ -442,7 +442,6 @@ El **Diseño Responsive** (RWD) permite que las páginas web se adapten automát
 
 - **Media Queries**: Reglas CSS condicionales
 - **Layouts flexibles**: Flexbox/Grid
-- **Imágenes escalables**
 
 ## 5.2. Media Queries
 ```css
