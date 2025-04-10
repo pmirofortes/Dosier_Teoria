@@ -290,6 +290,213 @@ En HTML, los formularios son una herramienta fundamental para recopilar datos de
 
 [Enlace al encabezado](#titulo-del-dosier "Enlace al encabezado")
 # 4. CSS
+
+## 4.1. Introducción
+CSS (Cascading Style Sheets) es un lenguaje de diseño utilizado para controlar la presentación y el estilo de documentos HTML. Permite separar el contenido de su presentación visual.
+
+## 4.2. Formas de aplicar CSS
+
+### 4.2.1. CSS en línea
+Se aplica directamente a un elemento HTML usando el atributo `style`:
+```
+<p style="color: blue;">Texto azul</p>
+```
+
+### 4.2.2. CSS interno
+Se define dentro de la etiqueta `<style>` en el `<head>` del documento HTML:
+```
+<head>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+    p {
+      color: green;
+    }
+  </style>
+</head>
+```
+
+### 4.2.3. CSS externo
+Se escribe en un archivo separado con extensión `.css` y se enlaza al HTML:
+```
+<head>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+```
+
+## 4.3. Selectores CSS
+
+### 4.3.1. Etiqueta
+Selecciona elementos por su etiqueta HTML:
+```
+p { 
+    font-size: 16px; 
+}
+```
+
+### 4.3.2. Clase
+Selecciona elementos con un atributo `class` utilizando ".clase":
+```
+.destacado { 
+    background-color: yellow; 
+}
+```
+
+### 4.3.3. ID
+Selecciona un elemento con un atributo `id` específico:
+```
+#header { 
+    height: 100px; 
+}
+```
+
+### 4.3.4. Universal
+Selecciona todos los elementos usando el * :
+```
+* { 
+    margin: 0; padding: 0; 
+}
+```
+
+## 4.4. Propiedades básicas en CSS
+
+### 4.4.1. Colores y fondo
+`color: #FF0000;` (Color de texto)  
+`background-color: blue;` (Color de fondo)  
+`background-image: url('imagen.jpg');` (Asigna una imagen de fondo)
+
+Los colores se basan en combinaciones RGB y HEX, puedes consultarlas en este enlace y asi recibir el codigo del color que tu quieras: [RGB Colores](https://htmlcolorcodes.com/es/ "Titulo opcional")
+
+### 4.4.2. Texto
+`font-family: Arial, sans-serif;`  
+`font-size: 18px;`  
+`font-weight: bold;`  
+`text-align: center;`  
+`line-height: 1.5;`
+
+### 4.4.3. Tamaños y márgenes
+`width: 300px;` (Ancho)  
+`height: 200px;` (Alto)  
+`margin: 10px;` (Margen exterior)  
+`padding: 20px;` (Relleno interior)  
+`border: 1px solid black;` (Borde)
+
+### 4.4.4. Posicionamiento
+`position: relative;` (relative | absolute | fixed)  
+`top: 20px;`  
+`left: 50px;`  
+`right: 0;`  
+`bottom: 0;`
+
+#### 4.4.4.1. Tipos de posicionamiento:
+- **absolute**: Se posiciona respecto al ancestro posicionado más cercano
+- **relative**: Se posiciona respecto a su posición normal
+- **fixed**: Se posiciona respecto a la ventana del navegador
+
+### 4.5.3. Distribución de Hijos
+En CSS, los "hijos" se refieren a elementos HTML que están directamente contenidos dentro de otros elementos. Existen varias formas de seleccionarlos y estilizarlos:
+- Selector directo >
+```css
+/* Selecciona solo los <li> que son hijos DIRECTOS de <ul> */
+ul > li {
+  color: red;
+}
+```
+
+- Selector descendiente
+
+```css
+/* Selecciona TODOS los <p> dentro de <div>, sin importar el nivel */
+div p {
+  font-weight: bold;
+}
+
+```
+- Combinación con pseudo clases
+
+```css
+/* Primer hijo directo de un contenedor */
+.container > :first-child {
+  font-size: 1.2em;
+}
+
+/* Ultimo hijo directo de un contenedor */
+.container > :last-child {
+  font-size: 1.2em;
+}
+
+/* Cada tercer hijo en una lista */
+ul > li:nth-child(3n) {
+  background: lightgray;
+}
+```
+
+
+
 [Enlace al encabezado](#titulo-del-dosier "Enlace al encabezado")
-# 5. Diseño Responsive
+# 5. DISEÑO RESPONSIVE
+## 5.1. Conceptos Clave
+El **Diseño Responsive** (RWD) permite que las páginas web se adapten automáticamente a diferentes dispositivos mediante:
+
+- **Media Queries**: Reglas CSS condicionales
+- **Layouts flexibles**: Flexbox/Grid
+- **Imágenes escalables**
+
+## 5.2. Media Queries
+```css
+.container { width: 100%; }
+
+/* Tablet */
+@media (min-width: 768px) {
+  .container { width: 750px; }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .container { width: 980px; }
+}
+```
+## 5.3. Flexbox
+
+### 5.3.1. Conceptos Básicos
+Flexbox es un **modelo de layout CSS** para diseñar estructuras flexibles y responsivas con un solo eje (fila o columna).
+
+```css
+.container {
+  display: flex; 
+}
+```
+- Direction
+```css
+.container {
+  flex-direction: row | row-reverse | column | column-reverse;
+}
+```
+Esto indica si se muestra en fila/fila inversa o en columna/columna inversa. Por defecto, viene con row.
+![Flex-direction](./flex-direction.svg " Flex-direction")
+
+- Align-items
+```css
+.container {
+  align-items: stretch;    /* Estira para llenar contenedor */
+  align-items: flex-start; /* Arriba */
+  align-items: flex-end;   /* Abajo */
+  align-items: center;     /* Centrado vertical */
+  align-items: baseline;   /* Alineado por línea base */
+}
+```
+- Justify Content
+```css
+.container {
+  justify-content: flex-start;    /* Al inicio (izquierda) */
+  justify-content: flex-end;      /* Al final (derecha) */
+  justify-content: center;        /* Centrado */
+  justify-content: space-between; /* Espacio entre ítems */
+  justify-content: space-around;  /* Espacio alrededor */
+  justify-content: space-evenly;  /* Espacio uniforme */
+}
+```
+
 [Enlace al encabezado](#titulo-del-dosier "Enlace al encabezado")
